@@ -5,9 +5,10 @@ on:
     branches: master
 
 jobs:
-
   build:
-    runs-on: ubuntu-latest    
+    runs-on: ubuntu-latest
+    env:
+      working-directory: ./tomsbirthdaybukkakebonana
     
     steps:
     - uses: actions/checkout@v2
@@ -16,6 +17,8 @@ jobs:
 
     - name: Installation ⏳
       run: yarn
+      working-directory: ${{env.working-directory}}
    
     - name: Build 🧱
       run: yarn build
+      working-directory: ${{env.working-directory}}
