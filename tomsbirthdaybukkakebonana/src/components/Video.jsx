@@ -16,16 +16,16 @@ function Video() {
                     <h1>Happy Birthday Bukkake Bonanza Tom!!!!</h1>
                     <p>Watch it all</p>
                     <ReactPlayer
-                        url={"./test.MP4"}
+                        url={"https://youtu.be/Q1GLMsDZE8o"}
                         width="100%"
                         height="100%"
-
                         controls={true}
                         onEnded={() => setShowNextButton(true)} />
 
                     {
                         showNextButton &&
                         <Button
+                            style={{marginTop: "10px"}}
                             variant="secondary"
                             size="lg"
                             onClick={() => setButtonPressed(true)}>Click Here 4 More Bukkake</Button>
@@ -34,7 +34,7 @@ function Video() {
                 </>
             }
             {
-                buttonPressed && <Gallery />
+                buttonPressed && <Gallery onGalleryClose={() => setButtonPressed(false)} />
             }
         </>
     );
