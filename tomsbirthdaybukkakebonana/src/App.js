@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import Video from './components/Video.jsx';
 import 'bootstrap/dist/css/bootstrap.min.css';
