@@ -6,7 +6,7 @@ import Gallery from './Gallery.jsx'
 function Video() {
 
     const [showNextButton, setShowNextButton] = React.useState(false)
-    const [buttonPressed, setButtonPressed] = React.useState(true)
+    const [buttonPressed, setButtonPressed] = React.useState(false)
 
     return (
         <>
