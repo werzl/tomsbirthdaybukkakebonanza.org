@@ -34,6 +34,8 @@ function Video() {
                         allowfullscreen="true"></iframe> */}
 
                     <YouTube
+                        containerClassName="playerContainer"
+                        className="player"
                         videoId="Q1GLMsDZE8o"
                         opts={playerOptions}
                         onEnd={() => setButtonPressed(true)} />
