@@ -6,7 +6,7 @@ import Gallery from './Gallery.jsx'
 function Video() {
 
     const [showNextButton, setShowNextButton] = React.useState(false)
-    const [buttonPressed, setButtonPressed] = React.useState(false)
+    const [buttonPressed, setButtonPressed] = React.useState(true)
 
     return (
         <>
@@ -16,7 +16,7 @@ function Video() {
                     <h1>Happy Birthday Bukkake Bonanza Tom!!!!</h1>
                     <p>Watch it all</p>
                     <ReactPlayer
-                        url={"https://youtu.be/Q1GLMsDZE8o"}
+                        url={"https://youtu.be/Q1GLMsDZE8o?rel=0"}
                         width="100%"
                         height="100%"
                         controls={true}
