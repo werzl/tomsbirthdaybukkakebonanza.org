@@ -1,29 +1,19 @@
-import React, { useRef } from 'react'
-import { findDOMNode } from 'react-dom'
-import screenfull from 'screenfull'
-import ReactPlayer from 'react-player'
+import React from 'react';
 import Button from 'react-bootstrap/Button';
-import Gallery from './Gallery.jsx'
+import Gallery from './Gallery.jsx';
+import YouTube from 'react-youtube';
 
-const playerConfig = {
-    youtube: {
-        playerVars: {
-            showinfo: 0,
-            rel: 0,
-            modestbranding: 1,
-            playsinline: 1
-        }
+const playerOptions = {
+    playerVars: {
+        showinfo: 0,
+        rel: 0,
+        modestbranding: 1,
+        showcontrols: 1
     }
 };
 
 function Video() {
     const [buttonPressed, setButtonPressed] = React.useState(false);
-
-    const player = useRef(null);
-
-    const onClickFullscreen = () => {
-        screenfull.request(findDOMNode(player.current));
-    }
 
     return (
         <>
@@ -34,20 +24,19 @@ function Video() {
 
                     <p>Watch it all</p>
 
-                    <Button
-                        style={{ marginTop: "10px", marginBottom: "25px" }}
-                        variant="secondary"
-                        size="lg"
-                        onClick={() => onClickFullscreen()}>Fullscreen</Button>
+                    {/* <iframe
+                        title="tomsbirthdayvideo"
+                        width="560"
+                        height="315"
+                        src="https://www.youtube.com/embed/Q1GLMsDZE8o?rel=0&modestbranding=1"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen="true"></iframe> */}
 
-                    <ReactPlayer
-                        ref={player}
-                        url="https://www.youtube.com/embed/Q1GLMsDZE8o"
-                        width="100%"
-                        height="100%"
-                        config={playerConfig}
-                        controls={true}
-                        onEnded={() => setButtonPressed(true)} />
+                    <YouTube
+                        videoId="Q1GLMsDZE8o"
+                        opts={playerOptions}
+                        onEnd={() => setButtonPressed(true)} />
 
                     <Button
                         style={{ marginTop: "10px", marginBottom: "25px" }}
