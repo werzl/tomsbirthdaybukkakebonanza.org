@@ -1,6 +1,7 @@
 html {
   height: -webkit-fill-available;
   overflow: hidden;
+  background-color: #0d161d;
 }
 
 body {
