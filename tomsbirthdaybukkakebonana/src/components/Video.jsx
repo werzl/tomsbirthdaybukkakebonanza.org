@@ -4,9 +4,7 @@ import Button from 'react-bootstrap/Button';
 import Gallery from './Gallery.jsx'
 
 function Video() {
-
-    const [showNextButton, setShowNextButton] = React.useState(false)
-    const [buttonPressed, setButtonPressed] = React.useState(true)
+    const [buttonPressed, setButtonPressed] = React.useState(false)
 
     return (
         <>
@@ -20,17 +18,13 @@ function Video() {
                         width="100%"
                         height="100%"
                         controls={true}
-                        onEnded={() => setShowNextButton(true)} />
+                        onEnded={() => setButtonPressed(true)} />
 
-                    {
-                        showNextButton &&
                         <Button
                             style={{marginTop: "10px"}}
                             variant="secondary"
                             size="lg"
                             onClick={() => setButtonPressed(true)}>Click Here 4 More Bukkake</Button>
-
-                    }
                 </>
             }
             {
