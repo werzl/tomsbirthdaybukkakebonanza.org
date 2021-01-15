@@ -24,15 +24,6 @@ function Video() {
 
                     <p>Watch it all</p>
 
-                    {/* <iframe
-                        title="tomsbirthdayvideo"
-                        width="560"
-                        height="315"
-                        src="https://www.youtube.com/embed/Q1GLMsDZE8o?rel=0&modestbranding=1"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen="true"></iframe> */}
-
                     <YouTube
                         containerClassName="playerContainer"
                         className="player"
